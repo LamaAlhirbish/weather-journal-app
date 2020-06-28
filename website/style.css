@@ -1,0 +1,156 @@
+body {
+    background: rgb(182, 52, 74);
+    /* background: #f23557; */
+    font-family: '-apple-system', 'BlinkMacSystemFont', sans-serif;
+}
+
+#app {
+    margin: 10px;
+    height: 95vh;
+    border: 2px solid #f0d43a;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);    
+    color: #f0d43a;
+    justify-content: center;
+    text-align: center;
+    grid-gap: 1em;
+    font-size: 27px;
+    font-family: 'Oswald', sans-serif;
+    grid-template-areas:
+    'hd hd'
+    'in ent'
+    'in ent';
+}
+
+.headline { grid-area: hd; }
+.input { grid-area: in;}
+.entry {grid-area: ent; }
+
+.holder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.headline {
+    font-size: 40pt;
+}
+
+input {
+    height: 60px;
+    width: 75%;
+    background: white;
+    color: #f0d43a;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    border: none;
+}
+
+textarea {
+    width: 75%;
+    max-height: 20vh;
+    background: white;
+    color: #f0d43a;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    border: none;
+}
+
+.zip, .feel {
+    width: 100%;
+}
+
+button {
+    width: 75%;
+    height: 100px;
+    background: #3b4a6b;
+    color: #f0d43a;
+    font-size: 26px;
+    font-family: 'Oswald', sans-serif;
+    border: none;
+    box-shadow: 2px 4px 5px #444;
+}
+
+/* Reset style for HTML element on active to have no border*/
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+#title {
+    font-size: 27px;
+}
+
+.entry {
+    background: rgba(59, 74, 107, .4);
+    margin: 10%;
+    font-size: 24px;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+
+
+/* Style for Placeholder Text*/
+::placeholder { /* Firefox, Chrome, Opera */ 
+    color: #f0d43a; 
+    font-family: 'Oswald', sans-serif;
+
+} 
+  
+:-ms-input-placeholder { /* Internet Explorer 10-11 */ 
+    color: #f0d43a; 
+    font-family: 'Oswald', sans-serif;
+
+} 
+  
+::-ms-input-placeholder { /* Microsoft Edge */ 
+    color: #f0d43a; 
+    font-family: 'Oswald', sans-serif;
+
+}
+
+
+
+@media only screen and (max-width: 1000px) {
+    #app {
+        height: auto;
+        min-height: 95vh;
+        margin: 40px;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto, 1fr, 1fr;   
+        font-size: 4vw; 
+        grid-template-areas:
+        'hd'
+        'in'
+        'ent';
+    }
+    .headline {
+        font-size: 8vw;
+    }
+
+    input {
+        height: 75px;
+        font-size: 3.5vw;
+    }
+
+    button {
+        height: 100px;
+    }
+    
+    textarea {
+        max-height: 20vh;
+        font-size: 3.5vw;
+    }
+    .entry {
+        padding: 20px;
+    }
+}
